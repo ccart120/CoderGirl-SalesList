@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CoderGirl_SalesList
 {
@@ -12,6 +13,7 @@ namespace CoderGirl_SalesList
             program.Run();
             Console.ReadLine();
         }
+
         private void Run()
         {
             List<SalesRecord> salesRecords = GetSalesRecordsFromFileData();
@@ -22,9 +24,9 @@ namespace CoderGirl_SalesList
         private int GetCountForNorthAmerica(List<SalesRecord> salesRecords)
         {
             int count = 0;
-            foreach (SalesRecord record in salesRecords)
+            foreach(SalesRecord record in salesRecords)
             {
-                if (record.Region == "North America")
+                if(record.Region == "North America")
                 {
                     count++;
                 }
@@ -66,6 +68,3 @@ namespace CoderGirl_SalesList
         }
     }
 }
-
-
-
